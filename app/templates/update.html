@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/43fb59542f.js" crossorigin="anonymous"></script>
+
+    <title>To-Do App</title>
+</head>
+<body>
+    <div class="box-list">
+        <div class="box">
+            <form action="{% url 'update-task' pk=task_edit.id %}" method="POST">
+                {% csrf_token %}
+                <input type="text" value="{{ task_edit.name }}" name="task-name" placeholder="Tarefa">
+                <button class="hvr-push" type="submit">Editar</button>
+            </form>
+
+            <div class="task-list">
+                {% for task in tasks %}
+                <div class="task-item hvr-grow">
+                    <a href="{% url 'update-status-task' pk=task.id %}">
+                        <div class="title-task">
+                            {% if task.is_active %}
+                            <h4>{{task.name}}</h4>
+                            {% else %}
+                            <h4 class="cut"> {{task.name}}</h4>
+                            {% endif %}
+                        </div>
+                    
+                        
+                        <div class="opts">
+                            <a class="title-btn" href="{% url 'update-task' pk=task.id %}"><i class="far fa-edit"></i></a>
+                            <a class="title-btn" href="{% url 'delete-task' pk=task.id %}"><i class="far fa-trash-alt"></i></a>
+                        </div>
+                    </a>
+                    
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

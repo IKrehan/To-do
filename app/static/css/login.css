@@ -1,0 +1,131 @@
+html {
+    height: 100%;
+    background-color: #2B253A;
+    height: 100%;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, #eecda3 , #ef629f);
+}
+
+.box-list{
+    position: center;
+}
+
+.box{
+    width: 35%;
+    min-width: 200px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.box form input {
+    display: inline-block;
+    border:0;
+    width: 70%;
+    min-width: 200px;
+    background: none;
+    text-align: center;
+    padding: 13px 0px;
+    font-size: 20px;
+    outline: none;
+    color:black;
+    transition: 0.25s;
+    background-color: #e6e6e6;
+}
+
+.box form button {
+    display: inline-block;    
+    width: 25%;
+    min-width: 100px;
+    border:0;
+    background: none;
+    margin: 20px auto;
+    text-align: center;
+    padding: 17px 0px;
+    font-size: 14px;
+    outline: none;
+    color: white;
+    transition: 0.25s;
+    cursor:pointer;
+    background-color: #1ebe61;
+}
+
+.box button:hover{
+    background: #2ecc71;
+}
+
+.task-list {
+    padding: 14px;
+    text-align: center;
+}
+
+.task-item {
+    width: 100%;
+    min-width: 250px;   
+    background: none;
+    padding: 1px;
+    outline: none;
+    color:black;
+    transition: 0.25s;
+    margin-bottom: 10px;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: rgb(214, 214, 214);
+    text-align: left;
+}
+
+.title-task {
+    display: inline-block;
+    color: black;
+    margin-left: 5%;
+}
+
+.cut {
+    text-decoration: line-through
+}
+
+.opts {
+    display: inline-block;
+    float: right;
+    margin: 15px;
+}
+
+.title-btn {
+    display: inline-block;
+    margin: 5px;
+}
+
+.fa-trash-alt {
+    color: red !important;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
